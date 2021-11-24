@@ -1,0 +1,103 @@
+
+/* styles */
+.parent {
+  width: 100%;
+  height: 100vh;
+  @include flex(row, center, center);
+}
+
+.container {
+  width: 100%;
+  @include flex(row, center, center);
+}
+
+.btn {
+  padding: $btn-padding-y $btn-padding-x;
+  border-radius: $btn-border-radius;
+  color: $btn-text-color;
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem #b7b7b7;
+  }
+}
+
+.tooltip {
+  padding: $tooltip-padding-y $tooltip-padding-x;
+  background-color: $tooltip-bg-color;
+  color: $tooltip-text-color;
+  position: absolute;
+  border-radius: 10px;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.tooltip-mx-top {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $tooltip-bg-color;
+    border-left: 5px solid transparent;
+  }
+}
+
+.tooltip-mx-left {
+  &::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid $tooltip-bg-color;
+  }
+}
+
+.tooltip-mx-right {
+  &::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $tooltip-bg-color;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+}
+
+.tooltip-mx-bottom {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translate(-50%, 0);
+    border-bottom: 5px solid $tooltip-bg-color;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.fade {
+  visibility: hidden;
+  opacity: 0;
+}

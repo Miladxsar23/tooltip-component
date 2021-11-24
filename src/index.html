@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./tooltip.css" />
+    <title>tooltip example</title>
+</head>
+
+<body>
+    <!-- buttons with tooltip 
+  *add data-mx-toggle="tooltip" attribute for active tooltip
+  *add data-mx-placement for placement<top, right, left, bottom>
+  *add data-mx-title="..." for content of tooltip
+-->
+
+    <div class="parent">
+        <div class="container">
+            <button class="btn btn-dark" data-mx-toggle="tooltip" data-mx-placement="top"
+                data-mx-title="hello, top tooltip :)">
+                top tooltip
+            </button>
+            <button class="btn btn-blue" data-mx-toggle="tooltip" data-mx-placement="bottom"
+                data-mx-title="hello, bottom tooltip :)">
+                bottom tooltip
+            </button>
+            <button class="btn btn-red" data-mx-toggle="tooltip" data-mx-placement="left"
+                data-mx-title="hello, left tooltip :)">
+                left tooltip
+            </button>
+            <button class="btn btn-purple" data-mx-toggle="tooltip" data-mx-placement="right"
+                data-mx-title="hello, right tooltip :)">
+                right tooltip
+            </button>
+        </div>
+    </div>
+</body>
+<script src="./tooltip.js"></script>
+
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "tooltip-component",
+  "version": "1.0.0",
+  "description": "I was very interested in how Bootstrap components are made so I decided to make them. I made the tooltip today too. I hope you enjoy it.",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "node-sass ./src/styles/tooltip.scss ./dist/tooltip.css",
+    "build:copy" : "copyfiles -u 1 -a \"src/*\" \"src/script/*.js\" \"dist\"",
+    "clean" : "rimraf dist",
+    "build" : "run-p build:*",
+    "start" : "run-s clean build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miladxsar23/tooltip-component.git"
+  },
+  "keywords": [
+    "tooltip",
+    "tooltip-component",
+    "bootstrap-component",
+    "custom-tooltip"
+  ],
+  "author": "Milad shiriyan dehkordi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Miladxsar23/tooltip-component/issues"
+  },
+  "homepage": "https://github.com/Miladxsar23/tooltip-component#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  }
+}

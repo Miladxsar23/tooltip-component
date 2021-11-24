@@ -1,0 +1,15 @@
+/* operations */
+@each $name,
+$value in $color-list {
+  .btn-#{$name} {
+    background-color: $value;
+  }
+}
+
+/* operations */
+@mixin flex($t, $j, $a) {
+  display: flex;
+  flex-flow: $t wrap;
+  justify-content: $j;
+  align-items: $a;
+}
