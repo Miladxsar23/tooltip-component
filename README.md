@@ -13,7 +13,31 @@ Now just enter the following command in the terminal:
  ```shell
 npm start
 ```
-  
+
+## Usage
+You can create a tooltip both through data attributes and through JavaScript.
+
+--- Via data attribute
+ ```shell
+    <button class="btn btn-dark" data-mx-toggle="tooltip" data-mx-placement="top" data-mx-title="hello, top tooltip :)">top tooltip</button>
+```
+
+--- Via javascript
+
+ ```shell
+    let triggerTooltipEl = document.querySelector('triggerTooltipExample');
+    let tooltip = new Tooltip(triggerTooltipEl, options);
+```
+
+---methods
+
+Method | Argument | Description 
+--- | --- | --- | 
+show() | '' | Show tooltip | 
+hide() | '' | hide tooltip |
+updatePosition() | '' | Updates the tooltip position when the window is resized |
+updatePlacementArrow(placement) | string <top, left, right, bottom> | Updates the tooltip arrow position when placement changed |
+
 ## Live preview
   click [myCodepen](https://codepen.io/mxworld/pen/LYjojPY) link.
 
